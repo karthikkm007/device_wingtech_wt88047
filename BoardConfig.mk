@@ -239,3 +239,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 include vendor/wingtech/wt88047/BoardConfigVendor.mk
 
 TARGET_USES_QCOM_BSP := true
+ALLOW_MISSING_DEPENDENCIES := true
