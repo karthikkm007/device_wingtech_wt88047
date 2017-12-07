@@ -35,8 +35,9 @@
 #include <sys/types.h>
 
 #include <android-base/properties.h>
+#include <android-base/logging.h>
 #include "property_service.h"
-#include "vendor_init.h"
+//#include "vendor_init.h"
 #include "log.h"
 
 #include "init_msm8916.h"
@@ -47,6 +48,9 @@ __attribute__ ((weak))
 void init_target_properties()
 {
 }
+
+namespace android {
+namespace init {
 
 static int read_file2(const char *fname, char *data, int max_size)
 {
@@ -105,3 +109,5 @@ void vendor_load_properties()
     init_target_properties();
     init_alarm_boot_properties();
 }
+}  // namespace init
+}  // namespace android

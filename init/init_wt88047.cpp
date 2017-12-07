@@ -39,13 +39,17 @@
 #include <sys/sysinfo.h>
 
 #include <android-base/properties.h>
+#include <android-base/logging.h>
 
 #include "property_service.h"
-#include "vendor_init.h"
+//#include "vendor_init.h"
 
 #include "util.h"
 
 #include "init_msm8916.h"
+
+namespace android {
+namespace init {
 
 using android::base::GetProperty;
 
@@ -161,3 +165,5 @@ void init_target_properties()
     property_set("dalvik.vm.heapminfree", is2GB() ? "512k" : "2m");
     property_set("dalvik.vm.heapmaxfree", "8m");
 }
+}  // namespace init
+}  // namespace android
