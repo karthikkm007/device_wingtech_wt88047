@@ -96,6 +96,7 @@ wifi.interface=wlan0
 # Camera
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
+camera.disable_treble=true
 
 # IMS
 persist.radio.jbims=1
