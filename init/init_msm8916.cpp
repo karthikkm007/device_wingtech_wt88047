@@ -57,7 +57,7 @@ static int read_file2(const char *fname, char *data, int max_size)
 
     fd = open(fname, O_RDONLY);
     if (fd < 0) {
-        LOG(ERROR) <<  "failed to open '" << fname << "'\n";
+//        LOG(ERROR) <<  "failed to open '" << fname << "'\n";
         return 0;
     }
 
@@ -94,9 +94,9 @@ static void init_alarm_boot_properties()
          * 8 -> KPDPWR_N pin toggled (power key pressed)
          */
         if (buf[0] == '3' || tmp == "true")
-            property_set("ro.alarm_boot", "true");
+            android::init::property_set("ro.alarm_boot", "true");
         else
-            property_set("ro.alarm_boot", "false");
+            android::init::property_set("ro.alarm_boot", "false");
     }
 }
 
